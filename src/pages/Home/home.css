@@ -1,0 +1,294 @@
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #12a1fd;
+    
+}
+
+.home-container {
+    width: 70%;
+    height: 80%;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+}
+
+/* sidebar */
+.sidebar {
+    width: 30%;
+}
+
+.open , .close {
+    display: none;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #2f2d52;
+    color: #fff;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.personal-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.personal-info img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-position: center center;
+}
+
+.personal-info span {
+    font-size: 12px;
+}
+
+.btn-logout {
+    background: purple;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+}
+
+.chats {
+    background: rgb(43, 43, 94);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.chats input {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.find-user {
+    box-shadow: 0 1px 1px  rgba(255, 255, 255, 0.1);
+}
+
+.chats-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 70px);
+}
+
+.single-chat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.single-chat:hover {
+    cursor: pointer;
+    background: #2f2d52;
+}
+
+.single-chat img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.username-lastMessage {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.username-lastMessage .username {
+    font-weight: 700;
+}
+
+.username-lastMessage .last-msg {
+    font-size: 12px;
+    color: rgba(255,255,255, 0.8)
+}
+
+/* messages */
+.messages {
+    width: 70%;
+}
+
+.msg-navbar {
+    height: 70px;
+    padding: 0 15px;
+    background: rgb(41, 41, 153);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.data-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.data-options img {
+    height: 25px;
+}
+
+.messages-body {
+    height: calc(100% - 140px);
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.messages-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.messages-body::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+.message {
+    display: flex;
+    /* align-items: center; */
+    gap: 15px;
+}
+
+.message.owner {
+    flex-direction: row-reverse;
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.message-info img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 50%;
+}
+
+.message-info span {
+    color: grey;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.message-content {
+    max-width: 70%;
+}
+
+.message-body {
+    scroll-behavior: "smooth";
+    padding: 10px;
+    height: fit-content;
+    background: #fff;
+    border-radius: 0 12px 12px 12px;
+    width: max-content;
+    margin-bottom: 10px;
+}
+
+.message.owner .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.message.owner .message-body {
+    background: rgb(84, 84, 199);
+    color: #fff;
+    width: max-content;
+    margin-bottom: 10px;
+    border-radius: 12px 0 12px 12px;
+}
+
+.message-input {
+    height: 70px;
+    background: #fff;
+    display: flex;
+}
+
+.message-input input {
+    flex-grow: 5;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    padding: 0 15px;
+}
+
+.message-input input::placeholder {
+    color: grey;
+}
+
+.controlers {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 1160px) {
+    .logo {
+        display: none;
+    }
+}
+
+
+@media (max-width: 787px) {
+    .home-container {
+        position: relative;
+        width: 90%;
+    }
+
+    .sidebar {
+        position: absolute;
+        left: -100%;
+        height: 100%;
+        width: 300px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .open, .close {
+        display: block;
+        cursor: pointer;
+    }
+
+    .messages {
+        width: 100%;
+    }
+}

@@ -1,0 +1,75 @@
+.register {
+    width: 100%;
+    height: 100vh;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+.chat-name {
+    font-size: 20px;
+    font-weight: 700;
+    width: fit-content;
+    margin: auto;
+    color: #5d5b8d;
+}
+
+.reg {
+    width: fit-content;
+    margin: auto;
+    color: #5d5b8d;
+}
+
+.input-control {
+    border-bottom: 1px solid #eee;
+    min-width: 300px;
+}
+
+.input-control input {
+    border: none;
+    outline: none;
+    width: 100%;
+    display: inline-block;
+    padding: 15px 20px;
+}
+
+.input-control input::placeholder {
+    color: #5d5b8d;
+}
+
+#file {
+    display: none;
+}
+
+.add-avatar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.switch-text {
+    font-size: 14px;
+    color: #5d5b8d;
+}
+
+.login-btn {
+    color: #12a1fd;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-btn:hover {
+    text-decoration: none;
+}
